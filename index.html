@@ -41,7 +41,13 @@
           <a href="/" class="me-4 d-none d-md-block">
             <img src="./OI_files/oi-logo-w.png" class="me-2" />
           </a>
-          <button class="d-block d-md-none navbar-toggler" type="button">
+          <button
+            class="d-block d-md-none navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#drawerMenu"
+            aria-controls="drawerMenu"
+          >
             <i class="fas fa-bars text-white" style="transform: scaleX(2)"></i>
           </button>
           <div class="d-none d-md-flex flex-grow-1 align-items-center">
@@ -81,6 +87,27 @@
                 </li>
               </ul>
             </div>
+          </div>
+          <div
+            class="offcanvas offcanvas-end d-flex d-md-none"
+            tabindex="-1"
+            id="drawerMenu"
+            aria-labelledby="drawerMenuLabel"
+          >
+            <div class="offcanvas-header">
+              <a href="/" class="me-4">
+                <img src="./OI_files/oi-logo-w.png" class="me-2" />
+              </a>
+              <button
+                type="button"
+                class="btn text-white"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              >
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+            <div class="offcanvas-body"></div>
           </div>
         </div>
       </div>
@@ -304,6 +331,7 @@
     ></script>
     <script>
       $(document).ready(function () {
+        $(".offcanvas-body").html($(".navbar-nav").html());
         $("#checkIn").attr("min", new Date().toISOString().split("T")[0]);
         $("#checkIn").on("change", function () {
           var checkOutDate = new Date($(this).val());
@@ -341,7 +369,7 @@
           );
           modal.hide();
         });
-        $("#ad").click(function (e) {
+        $(document).on("click", "#ad", function (e) {
           if (e.target.nodeName === "SPAN" || e.target.nodeName === "BUTTON") {
             return;
           }
