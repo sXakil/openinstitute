@@ -165,14 +165,18 @@
             </div>
           </div>
         </div>
-        <button class="d-flex align-items-center see-more">
+        <button
+          class="d-flex align-items-center see-more"
+          data-bs-toggle="modal"
+          data-bs-target="#preview"
+        >
           <i class="fas fa-camera"></i>
           <p class="m-0 ms-2">See all photos</p>
         </button>
       </div>
 
       <div class="row">
-        <div class="col col-12 col-md-6">
+        <div class="col col-12 col-md-6 d-flex flex-column align-items-center">
           <p class="h5 mt-5">Pricing</p>
           <div class="reservation">
             <div class="d-flex align-items-center justify-content-between">
@@ -239,7 +243,7 @@
             </div>
           </div>
         </div>
-        <div class="col col-12 col-md-6">
+        <div class="col col-12 col-md-6 d-flex flex-column align-items-center">
           <p class="h5 mt-5 ms-1">Meet your host</p>
           <div class="owner-preview details-page">
             <div class="details-card">
@@ -293,6 +297,172 @@
         voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam,
         voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam.
       </p>
+      <hr />
+      <div class="d-flex w-100 stats-header gap-2 mt-4 mb-2">
+        <p>
+          <strong>&starf; 4.85</strong>
+          <small>Rating</small>
+        </p>
+        <span>&middot;</span>
+        <p>
+          <strong>150</strong>
+          <small>Reviews</small>
+        </p>
+      </div>
+      <div class="row mb-4">
+        <div
+          class="col col-12 col-md-6 d-flex align-items-center rating-breakdown gap-2"
+        >
+          <span>Cleanliness</span>
+          <div
+            class="progress flex-grow-1 ms-auto"
+            style="height: 3px; max-width: 200px"
+          >
+            <div
+              class="progress-bar bg-dark"
+              role="progressbar"
+              style="width: 90%"
+            ></div>
+          </div>
+          <small>4.8</small>
+        </div>
+        <div
+          class="col col-12 col-md-6 d-flex align-items-center rating-breakdown gap-2"
+        >
+          <span>Communication</span>
+          <div
+            class="progress flex-grow-1 ms-auto"
+            style="height: 3px; max-width: 200px"
+          >
+            <div
+              class="progress-bar bg-dark"
+              role="progressbar"
+              style="width: 85%"
+            ></div>
+          </div>
+          <small>4.6</small>
+        </div>
+        <div
+          class="col col-12 col-md-6 d-flex align-items-center rating-breakdown gap-2"
+        >
+          <span>Check-in</span>
+          <div
+            class="progress flex-grow-1 ms-auto"
+            style="height: 3px; max-width: 200px"
+          >
+            <div
+              class="progress-bar bg-dark"
+              role="progressbar"
+              style="width: 90%"
+            ></div>
+          </div>
+          <small>4.9</small>
+        </div>
+        <div
+          class="col col-12 col-md-6 d-flex align-items-center rating-breakdown gap-2"
+        >
+          <span>Accuracy</span>
+          <div
+            class="progress flex-grow-1 ms-auto"
+            style="height: 3px; max-width: 200px"
+          >
+            <div
+              class="progress-bar bg-dark"
+              role="progressbar"
+              style="width: 75%"
+            ></div>
+          </div>
+          <small>4.5</small>
+        </div>
+        <div
+          class="col col-12 col-md-6 d-flex align-items-center rating-breakdown gap-2"
+        >
+          <span>Location</span>
+          <div
+            class="progress flex-grow-1 ms-auto"
+            style="height: 3px; max-width: 200px"
+          >
+            <div
+              class="progress-bar bg-dark"
+              role="progressbar"
+              style="width: 90%"
+            ></div>
+          </div>
+          <small>4.8</small>
+        </div>
+        <div
+          class="col col-12 col-md-6 d-flex align-items-center rating-breakdown gap-2"
+        >
+          <span>Value</span>
+          <div
+            class="progress flex-grow-1 ms-auto"
+            style="height: 3px; max-width: 200px"
+          >
+            <div
+              class="progress-bar bg-dark"
+              role="progressbar"
+              style="width: 90%"
+            ></div>
+          </div>
+          <small>4.75</small>
+        </div>
+      </div>
+      <div class="row my-4">
+        <div
+          class="col col-12 col-md-6 d-flex flex-column gap-2 review-item h-100 pb-4"
+        >
+          <div class="d-flex align-items-center gap-2">
+            <img
+              src="https://loremflickr.com/g/320/240/potrait,people/all"
+              alt="image"
+              class="img-thumbnail circular"
+            />
+            <div class="d-flex flex-column">
+              <p class="m-0">John Doe</p>
+              <p class="m-0 text-muted small">May 2021</p>
+            </div>
+          </div>
+          <p class="m-0">
+            We had a wonderful stay at Made's place! The tree house is as dreamy
+            and beautiful as the pictures. It feels private and is away from the
+            bustle of tourists, but there are restaurants
+          </p>
+        </div>
+      </div>
+      <div class="d-flex justify-content-start">
+        <button class="btn btn-outline-dark mb-3">Show all reviews</button>
+      </div>
+    </div>
+    <div class="modal fade" id="preview">
+      <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
+        <div class="modal-content">
+          <button
+            type="button"
+            class="btn-close p-3"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+          <div class="modal-body">
+            <div class="row image-gallery">
+              <div class="col col-sm-12 p-1">
+                <img
+                  src="https://source.unsplash.com/collection/8890044/600x500"
+                  alt="image"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
     <footer>&copy; 2021 Tierra Sagrada</footer>
     <script src="./OI_files/jquery-3.6.0.min.js"></script>
@@ -304,6 +474,23 @@
     <script>
       $(document).ready(function () {
         $(".offcanvas-body").html($(".navbar-nav").html());
+        // generating placeholders for testing, delete this section in production
+        let el = document.querySelector(".review-item");
+        for (let i = 0; i <= 4; i++) {
+          let clone = el.cloneNode(true);
+          el.parentElement.appendChild(clone);
+        }
+        let gallery = document.querySelector(".modal-body .image-gallery .col");
+        for (let i = 0; i <= 4; i++) {
+          let clone = gallery.cloneNode(true);
+          clone.className = [
+            "col col-md-6 col-sm-12 p-1",
+            "col col-md-6 col-sm-12 p-1",
+            "col col-sm-12 p-1",
+          ][i % 3];
+          gallery.parentElement.appendChild(clone);
+        }
+        // section end
       });
     </script>
   </body>
